@@ -1,4 +1,48 @@
 body{
-    box-sizing: border-box;
-    background-color: aqua;
+    position: relative;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 }
+
+.header{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+.container{
+    background-color: blue;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .results h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin: 20px;
+    height: 30px;
+    width: 100px;
+}
+
+.container .btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+

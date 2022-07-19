@@ -1,6 +1,6 @@
-const computerChoiceDisplay = document.getElementById('computer-choice')
-const userChoiceDisplay = document.getElementById('your-choice')
-const resultDisplay = document.getElementById('result')
+var computerChoiceDisplay = document.getElementById('computer-choice')
+var userChoiceDisplay = document.getElementById('your-choice')
+var resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
 let userChoice
 let computerChoice
@@ -8,7 +8,7 @@ let result
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id
-    userChoiceDisplay.innerHTML = userChoice
+    userChoiceDisplay.value = userChoice
     generateComputerChoice()
     getResult()
 }))
@@ -24,7 +24,7 @@ function generateComputerChoice(){
     if(randomNumber === 3){
         computerChoice = 'Scissor'
     }
-    computerChoiceDisplay.innerHTML = computerChoice
+    computerChoiceDisplay.value = computerChoice
 }
 
 function getResult() {
@@ -49,6 +49,6 @@ function getResult() {
     if (computerChoice ===  'Scissor' && userChoice === 'Rock'){
         result = 'You win!'
     }
-    resultDisplay.innerHTML = result
+    resultDisplay.value = result
 }
 
