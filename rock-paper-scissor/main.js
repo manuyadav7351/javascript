@@ -2,7 +2,7 @@ var computerChoiceDisplay = document.getElementById('computer-choice')
 var userChoiceDisplay = document.getElementById('your-choice')
 var resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
-const inputbox = document.querySelector('input')
+const inputbox = document.querySelector('input#result')
 let userChoice
 let computerChoice
 let result
@@ -52,10 +52,19 @@ function getResult() {
         result = 'You win!'
     }
     resultDisplay.value = result
-}
-
-function color(){
-    if (resultDisplay.value === 'You win!'){
-        inputbox.backgroundColor = '#2ad807'
+    if (result == 'You win!'){
+        inputbox.style.backgroundColor = '#2ad807'
+    }
+    if (result == 'You lost!'){
+        inputbox.style.backgroundColor = '#f32c2c'
+    }
+    if (result == 'its a draw!'){
+        inputbox.style.backgroundColor = '#f5b25b'
     }
 }
+
+// function color(){
+//     if (resultDisplay.value == 'You win!'){
+//         inputbox.backgroundColor = '#2ad807'
+//     }
+// }
