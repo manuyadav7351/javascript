@@ -1,21 +1,19 @@
-var computerChoiceDisplay = document.getElementById('computer-choice')
-var userChoiceDisplay = document.getElementById('your-choice')
-var resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelectorAll('button')
-const inputbox = document.querySelector('input')
+const displaycomputer = document.getElementById('computer')
+const displayuser = document.getElementById('user')
+const displayresult = document.getElementById('result')
+const choices = document.querySelectorAll('button')
 let userChoice
 let computerChoice
 let result
 
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+choices.forEach(choices =>  choices.addEventListener('click', (e) =>{
     userChoice = e.target.id
-    userChoiceDisplay.value = userChoice
-    generateComputerChoice()
-    getResult()
-    color()
-}))
+    displayuser.value = userChoice
+    generatecomputerchoice()
+    getresult()
+}) )
 
-function generateComputerChoice(){
+function generatecomputerchoice(){
     const randomNumber = Math.floor(Math.random() * 3) + 1
     if(randomNumber === 1){
         computerChoice = 'Rock'
@@ -24,12 +22,12 @@ function generateComputerChoice(){
         computerChoice = 'Paper'
     }
     if(randomNumber === 3){
-        computerChoice = 'Scissor'
+        computerChoice === 'Scissor'
     }
-    computerChoiceDisplay.value = computerChoice
+    displaycomputer.value = computerChoice
 }
 
-function getResult() {
+function getresult(){
     if (computerChoice === userChoice){
         result = 'its a draw!'
     }
@@ -51,11 +49,5 @@ function getResult() {
     if (computerChoice ===  'Scissor' && userChoice === 'Rock'){
         result = 'You win!'
     }
-    resultDisplay.value = result
-}
-
-function color(){
-    if (resultDisplay.value === 'You win!'){
-        inputbox.backgroundColor = '#2ad807'
-    }
+    displayresult.value = result
 }
