@@ -1,0 +1,65 @@
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #bbb8b8;
+}
+
+.results{
+    display: block;
+    justify-content: center;
+    color: black;
+    font-size: 3rem;
+    margin-top: .5rem;
+
+}
+.grid{
+    margin-top: 1.5rem;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    width: 20px;
+    height: 20px;
+}
+
+.invader{
+    background-image: url(./media/alien.png);
+    background-size: 20px 20px;
+}
+
+.shooter{
+    background-image: url(./media/soldier.png);
+    border-radius: 3px;
+    background-size: 20px 20px;
+}
+
+.laser{
+    background-image: url(./media/ammo.png);
+    background-size: 20px 20px;
+}
+
+.boom{
+ background-color: orange;
+ border-radius: 50%;
+}
+
+.play{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: #bbb8b8;
+    border: 2px solid white;
+}
+
+.play:hover{
+    transform: scale(1.075);
+    border: 2.5 solid whitesmoke;
+}
